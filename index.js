@@ -12,7 +12,7 @@ const createDate = (dates, position) =>{
   let epoch = dates.map(date => new Date(date).getTime() / 1000)
 
   if (position != null){
-    return epoch[position].toString()
+    return String(epoch[position])
   }
   else{
     epoch.sort(function(a, b){return a - b})
